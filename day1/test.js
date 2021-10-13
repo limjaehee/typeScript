@@ -1,4 +1,5 @@
 "use strict";
+/* 타입스크립트 기본타입 */
 exports.__esModule = true;
 //문자
 var strTxt = 'hi';
@@ -23,10 +24,10 @@ var Avengers;
     Avengers[Avengers["Thor"] = 2] = "Thor";
 })(Avengers || (Avengers = {}));
 var hero = Avengers.capt;
-console.log(hero);
+document.write(hero + '<br>');
 /* 인덱스 번호로 접근하기 */
 var hero1 = Avengers[1];
-console.log('Avengers' + hero1); //IronMan
+document.write('Avengers ' + hero1 + '<br>'); //IronMan
 /* 인덱스 변경해서 사용하기*/
 var Avengers2;
 (function (Avengers2) {
@@ -36,6 +37,26 @@ var Avengers2;
 })(Avengers2 || (Avengers2 = {}));
 var hero2 = Avengers2[2];
 var hero3 = Avengers2[4];
-console.log('Avengers2' + hero2); //capt
-console.log('Avengers2' + hero3); //Thor
+document.write('Avengers2 ' + hero2 + '<br>'); //capt
+document.write('Avengers2 ' + hero3 + '<br>'); //Thor
+//any 
+/* 기존에 자바스크립트로 구현되어 있는 웹 서비스 코드에 타입스크립트를 점진적으로 적용할 때 활용, 모든 타입에 대해서 허용한다는 의미를 가짐 */
+var str = "hi";
+var num = 10;
+var arr = ['a', 2, true];
+//void
+/* 변수에는 undefind와 null만 할당하고 함수에는 반환 값을 설정할 수 없는 타입 */
+var unuseful = undefined;
+document.write('unuseful ' + unuseful + '<br>');
+function notuse() {
+    document.write('sth ' + '<br>');
+}
+notuse();
+//never
+/* 함수의 끝에 절대 도달하지 않는다는 의미를 지닌 타입 */
+// function neverEnd():never {
+//     while(true) {
+//     }
+// }
+// neverEnd()
 console.log('test');

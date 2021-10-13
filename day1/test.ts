@@ -1,3 +1,5 @@
+/* 타입스크립트 기본타입 */
+
 //문자
 let strTxt: string = 'hi';
 //숫자
@@ -16,19 +18,44 @@ let array2 : [string, number] = ['hi', 10];
 
 //enum
 /* 이넘은 c, java와 같은 다른 언어에서 흔하게 쓰이는 타입으로 특정 값(상수)들의 집합을 의미합니다. */
-enum Avengers { capt, IronMan, Thor }
+enum Avengers { capt , IronMan, Thor }
 let hero: Avengers = Avengers.capt;
-console.log(hero);
+document.write( hero +'<br>')
+
 /* 인덱스 번호로 접근하기 */
-let hero1: Avengers = Avengers[1];
-console.log('Avengers' + hero1); //IronMan
+let hero1 = Avengers[1];
+document.write('Avengers '+ hero1 +'<br>') //IronMan
+
 /* 인덱스 변경해서 사용하기*/
 enum Avengers2 { capt = 2 , IronMan, Thor }
-let hero2: Avengers2 = Avengers2[2];
-let hero3: Avengers2 = Avengers2[4];
-console.log('Avengers2' + hero2) //capt
-console.log('Avengers2' + hero3) //Thor
+let hero2 = Avengers2[2];
+let hero3 = Avengers2[4];
+document.write('Avengers2 '+ hero2 +'<br>') //capt
+document.write('Avengers2 '+ hero3 +'<br>') //Thor
 
+//any 
+/* 기존에 자바스크립트로 구현되어 있는 웹 서비스 코드에 타입스크립트를 점진적으로 적용할 때 활용, 모든 타입에 대해서 허용한다는 의미를 가짐 */
+let str: any = "hi";
+let num: any = 10;
+let arr: any = ['a',2,true];
+
+//void
+/* 변수에는 undefind와 null만 할당하고 함수에는 반환 값을 설정할 수 없는 타입 */
+let unuseful: void = undefined;
+document.write('unuseful '+ unuseful +'<br>')
+function notuse():void {
+    document.write('sth '+ '<br>')
+}
+notuse();
+
+//never
+/* 함수의 끝에 절대 도달하지 않는다는 의미를 지닌 타입 */
+// function neverEnd():never {
+//     while(true) {
+
+//     }
+// }
+// neverEnd()
 
 console.log('test')
 
