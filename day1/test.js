@@ -1,17 +1,17 @@
 "use strict";
 /* 타입스크립트 기본타입 */
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 //문자
-var strTxt = 'hi';
+let strTxt = 'hi';
 //숫자
-var numTxt = 10;
+let numTxt = 10;
 //논리
-var isTrueTxt = false;
+let isTrueTxt = false;
 //배열
-var array = [1, 2, 3];
-var array1 = [1, 2, 3]; //제네릭 사용법
+let array = [1, 2, 3];
+let array1 = [1, 2, 3]; //제네릭 사용법
 //배열의 고정요소 타입
-var array2 = ['hi', 10];
+let array2 = ['hi', 10];
 //오류
 //console.log(arr[1].concat('!');) // Error, 'number' does not have 'concat'
 //console.log(arr[5] = 'hello') // Error, Property '5' does not exist on type '[string, number]'.
@@ -23,10 +23,10 @@ var Avengers;
     Avengers[Avengers["IronMan"] = 1] = "IronMan";
     Avengers[Avengers["Thor"] = 2] = "Thor";
 })(Avengers || (Avengers = {}));
-var hero = Avengers.capt;
+let hero = Avengers.capt;
 document.write(hero + '<br>');
 /* 인덱스 번호로 접근하기 */
-var hero1 = Avengers[1];
+let hero1 = Avengers[1];
 document.write('Avengers ' + hero1 + '<br>'); //IronMan
 /* 인덱스 변경해서 사용하기*/
 var Avengers2;
@@ -35,18 +35,18 @@ var Avengers2;
     Avengers2[Avengers2["IronMan"] = 3] = "IronMan";
     Avengers2[Avengers2["Thor"] = 4] = "Thor";
 })(Avengers2 || (Avengers2 = {}));
-var hero2 = Avengers2[2];
-var hero3 = Avengers2[4];
+let hero2 = Avengers2[2];
+let hero3 = Avengers2[4];
 document.write('Avengers2 ' + hero2 + '<br>'); //capt
 document.write('Avengers2 ' + hero3 + '<br>'); //Thor
 //any 
 /* 기존에 자바스크립트로 구현되어 있는 웹 서비스 코드에 타입스크립트를 점진적으로 적용할 때 활용, 모든 타입에 대해서 허용한다는 의미를 가짐 */
-var str = "hi";
-var num = 10;
-var arr = ['a', 2, true];
+let str = "hi";
+let num = 10;
+let arr = ['a', 2, true];
 //void
 /* 변수에는 undefind와 null만 할당하고 함수에는 반환 값을 설정할 수 없는 타입 */
-var unuseful = undefined;
+let unuseful = undefined;
 document.write('unuseful ' + unuseful + '<br>');
 function notuse() {
     document.write('sth ' + '<br>');
